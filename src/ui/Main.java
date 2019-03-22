@@ -31,11 +31,11 @@ public class Main extends Application{
 	*/
 	public void start(Stage stage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("PacMan.fxml"));
-		
 		Parent root = loader.load();
 		
 		PacManController pacController = loader.getController();
 		pacController.setStage(stage);
+		pacController.setHostServices(getHostServices());
 		stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
                 try {
@@ -50,6 +50,7 @@ public class Main extends Application{
     	stage.setTitle("Pac Man Game!");
     	stage.setScene(scene);
     	stage.setFullScreen(true);
+    	stage.setResizable(true);
     	stage.show();
 	}
 

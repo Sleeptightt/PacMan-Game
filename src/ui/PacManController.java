@@ -3,12 +3,15 @@ package ui;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javafx.application.HostServices;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
@@ -32,6 +35,11 @@ import threads.PacManThread;
  * Universidad Icesi
  */
 public class PacManController {
+	
+	/**
+	* The host services used by the controller.
+	*/
+	private HostServices hostServices ;
 	
 	/**
     * The main stage handled by the controller.
@@ -525,7 +533,8 @@ public class PacManController {
      * This function shows information about the game on screen when the menu option is clicked.
      */
     public void aboutTheGame() {
-    	
+    	Hyperlink hl = new Hyperlink("https://github.com/Sleeptightt/PacMan-Game");
+    	hostServices.showDocument(hl.getText());
     }
     
     /**
@@ -568,5 +577,13 @@ public class PacManController {
 	 */
 	public void setStage(Stage stage) {
 		this.stage = stage;
+	}
+	
+	/**
+	 * This function modifies the controller's host services.
+	 * @param hostServices The new host services.
+	 */
+	public void setHostServices(HostServices hostServices) {
+		this.hostServices = hostServices;
 	}
 }
