@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Level
 1
 #radius posX posY wait direction bounces stopped
@@ -12,19 +11,3 @@
 50 600 700 16 DOWN 0 false
 60 222 10 14 UP 0 false
 40 1300 720 16 DOWN 0 false
-=======
-#Level
-1
-#radius posX posY wait direction bounces stopped
-40 50 90 10 LEFT 0 false
-40 120 400 12 RIGHT 0 false
-30 350 550 14 UP 0 false
-50 700 10 16 DOWN 0 false
-60 500 340 14 UP 0 false
-40 1100 400 16 DOWN 0 false
-50 800 200 12 RIGHT 0 false
-50 600 700 16 DOWN 0 false
-60 222 10 14 UP 0 false
-40 1300 720 16 DOWN 0 false
->>>>>>> c34efb0685afcba250a816739981ce2871bae56e
-50 931 641 12 RIGHT 0 false
